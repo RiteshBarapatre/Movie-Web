@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = ({elem}) => {
   return (
@@ -9,9 +10,9 @@ const Card = ({elem}) => {
         <p className="card-text">
           {elem?.show?.summary?.slice(0,116)}...
         </p>
-        <a href={`/show/${elem?.show?.id}`} target="__blank" className="btn btn-warning">
+        <Link to={`/show/${elem?.show?.id}`} className="btn btn-warning">
           More Info
-        </a>
+        </Link>
       </div>
     </div>
   );
