@@ -28,8 +28,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item mx-2">
-                <NavLink className="nav-link" to="/about">
-                    About Us
+                <NavLink className="nav-link" to="/booked">
+                    Booked Shows
                 </NavLink>
               </li>
               <li className="nav-item mx-2">

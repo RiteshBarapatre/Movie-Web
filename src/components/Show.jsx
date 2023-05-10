@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../styles/show.css";
 import { AiFillVideoCamera,AiOutlineLink } from "react-icons/ai";
 import { ToastContainer, toast } from 'react-toastify';
@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Show = () => {
   const { id } = useParams();
   const [show, setShow] = useState({})
-
+  const navigate = useNavigate()
   
   useEffect (()=>{
     const func = async ()=>{
@@ -28,10 +28,14 @@ const Show = () => {
   },[])
 
 
+  const ticket = ()=>{
+    navigate(`/book/${show?.name?.split(" ").join("")}`)
+  }
+
   return (
     <div className="show">
     <ToastContainer />
-      <h2>{show?.name} -</h2>
+      <h2>{show?.name} :-</h2>
       <div className="show__basic">
       <div className="show__image">
         <img
@@ -64,6 +68,7 @@ const Show = () => {
           <p>Status :- {show?.status}</p>
           <p>Premiered :- {show?.premiered} </p>
           <p>Summary :- {show?.summary}</p>
+          <button onClick={ticket}>Book Your Tickets</button>
         </div>
       </div>
     </div>
