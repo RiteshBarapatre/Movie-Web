@@ -1,0 +1,42 @@
+.show > h2{
+    text-align: center;
+}
+.show__basic{
+    display: flex;
+    margin-top: 5vh;
+}
+.rating{
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: goldenrod;
+}
+.show__info{
+    margin-left: 10vw;
+    font-size: 20px;
+}
+.watch{
+    margin-top: 20px;
+    display: flex;
+}
+.link{
+    padding: 5px;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.video{
+    padding: 5px;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 2px;
+    cursor: pointer;
+}
+.watch > a{
+    width: 50%;
+}
