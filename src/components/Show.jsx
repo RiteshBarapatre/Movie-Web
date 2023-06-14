@@ -4,6 +4,7 @@ import "../styles/show.css";
 import { AiFillVideoCamera,AiOutlineLink } from "react-icons/ai";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import parse from "html-react-parser";
 
 const Show = () => {
   const { id } = useParams();
@@ -67,7 +68,7 @@ const Show = () => {
           <p>Genres :- {show?.genres?.toString()}</p>
           <p>Status :- {show?.status}</p>
           <p>Premiered :- {show?.premiered} </p>
-          <p>Summary :- {show?.summary}</p>
+          <p>Summary :- {parse(show?.summary || "")}</p>
           <button onClick={ticket}>Book Your Tickets</button>
         </div>
       </div>
